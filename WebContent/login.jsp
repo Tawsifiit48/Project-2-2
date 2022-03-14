@@ -55,7 +55,7 @@
 					if("invalid".equals(msg)) {
 
 				%>
-					<h1>Something wnet Happend</h1>
+					<h1>Something went Happend</h1>
 				<%}%>
                   
                </form>

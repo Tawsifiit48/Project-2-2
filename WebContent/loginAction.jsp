@@ -4,18 +4,22 @@
 <%
 	String email = request.getParameter("email");
 	String password = request.getParameter("password");
+	System.out.println(email);
+	System.out.println(password);
 	if("admin@gmail.com".equals(email) && "admin".equals(password)) {
 		System.out.println("admin");
 		session.setAttribute("email", email);
 		response.sendRedirect("admin/adminHome.jsp"); //admin page
 	}
 	else {
-		System.out.println("2");
+		System.out.println("3");
 		int z = 0;
 		try {
 			Connection con = ConnectionProvider.getCon();
 			Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select *from users where email = '"+email+"' and password = '"+password+"'");
+			System.out.println(email);
+			System.out.println(password);
 			while(rs.next()) {
 				z = 1;
 				session.setAttribute("email", email);
