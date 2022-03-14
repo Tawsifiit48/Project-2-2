@@ -71,12 +71,10 @@
    
             <center><h2>Transport Enquiry System</h2></center>
             <a href="addNewProduct.jsp">Add New Bus <i class='fas fa-plus-square'></i></a>
-            <a href="allProductEditProduct.jsp">All Products & Edit Products <i class='fab fa-elementor'></i></a>
-            <a href="">Messages Received <i class='fas fa-comment-alt'></i></a>
-            <a href="">Orders Received <i class="fas fa-archive"></i></a>
-            <a href="">Cancel Orders <i class='fas fa-window-close'></i></a>
-            <a href="">Delivered Orders <i class='fas fa-dolly'></i></a>
-            <a href="">Logout <i class='fas fa-share-square'></i></a>
+            <a href="allProductEditProduct.jsp">All Buses & Edit Busses <i class='fab fa-elementor'></i></a>
+            <a href="messagesReceived.jsp">Messages Received <i class='fas fa-comment-alt'></i></a>
+            <a href="ordersReceived.jsp">Book List<i class="fas fa-archive"></i></a>
+            <a href="../logout.jsp">Logout<i class='fas fa-share-square'></i></a>
           </div>
            <br>
            <!--table-->

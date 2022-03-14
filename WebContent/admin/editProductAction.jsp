@@ -16,8 +16,11 @@ try{
 	
 	
 	
+	response.sendRedirect("allProductEditProduct.jsp?msg=done");
+	
 }
 catch(Exception e){
 	System.out.println(e);
+	response.sendRedirect("allProductEditProduct.jsp?msg=wrong");
 }
 %>
