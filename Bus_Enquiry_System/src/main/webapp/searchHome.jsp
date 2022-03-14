@@ -17,9 +17,9 @@
             <th scope="col">Departure</th>
              <th scope="col">Arrival</th>
               <th scope="col"> Price(tk)</th>
-            <th scope="col"><i>DateOf </i>  </th>
+            <th scope="col"><i>DateOf </i></th>
              <th scope="col">seats</th>
-            <th scope="col">Add to cart <i class='fas fa-cart-plus'></i></th>
+            <th scope="col">Add to cart<i class='fas fa-cart-plus'></i></th>
           </tr>
         </thead>
         <tbody>
@@ -37,14 +37,14 @@ z=1;
 
 %>
           <tr>
-           <td><%=rs.getString(1) %></td>
-            <td><%=rs.getString(2) %></td>
+           <td><%=rs.getString(1)%></td>
+            <td><%=rs.getString(2)%></td>
             <td><%=rs.getString(3) %></td>
             <td><%=rs.getString(4) %></td>
              <td><%=rs.getString(5) %></td>
               <td><%=rs.getString(6) %></td>
                <td><%=rs.getString(7) %></td>
-            <td><a href="addToCartAction.jsp">Add to cart <i class='fas fa-cart-plus'></i></a></td>
+            <td><a href="addToCartAction.jsp">Add to cart<i class='fas fa-cart-plus'></i></a></td>
           </tr>
 <% 
 }

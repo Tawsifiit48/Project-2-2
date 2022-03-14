@@ -64,7 +64,7 @@
         
         <form action="searchHome.jsp" method="post">
 
-            <a href="searchHome.jsp" class="btn">search</a>
+            <a href="home.jsp" class="btn">search</a>
         </form>
     
     </div>

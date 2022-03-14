@@ -35,9 +35,12 @@ if("wrong".equals(msg))
             <th scope="col">Bus Name</th>
             <th scope="col">Departure</th>
              <th scope="col">Arrival</th>
-              <th scope="col"> DateOf</th>
-            <th scope="col"><i></i> Price (tk) </th>
+              <th scope="col"> price</th>
+             
+            <th scope="col">dateOf </th>
+             
              <th scope="col">seats</th>
+            
             <th scope="col">Edit <i class='fas fa-pen-fancy'></i></th>
           </tr>
         </thead>
@@ -58,7 +61,7 @@ if("wrong".equals(msg))
             <td><%=rs.getString(3) %></td>
             <td><%=rs.getString(4) %></td>
             <td><%=rs.getString(5) %></td>
-            <td><i></i><%=rs.getString(6) %></td>
+            <td><%=rs.getString(6) %></td>
             <td><%=rs.getString(7) %></td>
             <td><a href="editProduct.jsp?id=<%=rs.getString(1) %>">Edit <i class='fas fa-pen-fancy'></i></a></td>
           </tr>

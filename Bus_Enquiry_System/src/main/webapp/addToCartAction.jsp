@@ -1,7 +1,7 @@
-<%@page import="org.apache.catalina.startup.HomesUserDatabase"%>
-<%@page import="com.mysql.cj.xdevapi.CreateIndexParams"%>
+
 <%@page import ="sign_model.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
+
 <%
 String email=session.getAttribute("email").toString();
 String bus_id = request.getParameter("id");
@@ -14,25 +14,25 @@ int z=0;
 try{
 	Connection con = ConnectionProvider.getCon();
 	Statement st = con.createStatement();
-	ResultSet rs=st.executeQuery("select * from buslist where id='"+bus_id+"'");
+	ResultSet rs=st.executeQuery("select * from buslist where id="+bus_id+"");
    while(rs.next()){
 	   price=rs.getInt(4);
 	   tic_total =price;
 	   
    }
-   ResultSet rs1=st.executeQuery("select * from buslist where id='"+bus_id+"' and email='"+email+"'");
+   ResultSet rs1=st.executeQuery("select * from cart where bus_id="+bus_id+" and email='"+email+"'");
    while(rs1.next()){
 	  cart_total=rs1.getInt(5);
 	  cart_total=cart_total+tic_total;
-	  quantity=rs.getInt(3);
+	  quantity=rs1.getInt(3);
 	  quantity=quantity+1;
 	  z=1;
 	  
 	   
    }
    if(z==1){
-	   st.executeUpdate("update cart set total ='"+cart_total+"',quantity='"+quantity+"'where bus_id='"+bus_id+"' and email='"+email+"'");
-	   response.sendRedirect("home.jsp?msg=exist");
+	   st.executeUpdate("update cart set total ='"+cart_total+"',quantity='"+quantity+"'where bus_id="+bus_id+" and email='"+email+"'");
+	   response.sendRedirect("home.jsp?msg=exists");
 	   
    }
    if(z==0){
