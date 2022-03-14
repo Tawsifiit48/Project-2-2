@@ -86,7 +86,7 @@ try {
         <tbody>
       <%
       
-      	ResultSet rs = st.executeQuery("select busname, departure, arrival, cart.price, quantity, total, id from buslist inner join cart on buslist.id = cart.bus_id and cart.email ='"+email+"'");
+      	ResultSet rs = st.executeQuery("select * from buslist inner join cart on buslist.id = cart.bus_id and cart.email ='"+email+"'");
  
   
       while(rs.next()) 
@@ -101,8 +101,8 @@ try {
             <td><%=rs.getString(3) %></td>
              <td><%=rs.getString(4) %></td>
             <td><i class="fa fa-inr"></i><%=rs.getString(5) %> </td>
-            <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> and quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(5) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> and quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
-            <td><i class="fa fa-inr"></i><%=rs.getString(6) %> </td>
+            <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(10) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
+            <td><i class="fa fa-inr"></i><%=rs.getString(12) %> </td>
             <td><a href="removeFromCart.jsp? id = <%=rs.getString(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
           </tr>
           

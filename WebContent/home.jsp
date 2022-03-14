@@ -56,14 +56,7 @@ try{
 	ResultSet rs = st.executeQuery("select * from buslist");
 
 	while(rs.next()){
-		/* System.out.println("Home");
-        System.out.println(rs.getString(1));
-        System.out.println(rs.getString(2));
-        System.out.println(rs.getString(3));
-        System.out.println(rs.getString(4));
-        System.out.println(rs.getString(5));
-        System.out.println(rs.getString(6));
-        System.out.println(rs.getString(7)); */
+		
 
 	%>
 	          <tr>

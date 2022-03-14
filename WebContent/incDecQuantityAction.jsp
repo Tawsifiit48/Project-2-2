@@ -7,7 +7,7 @@ String email=session.getAttribute("email").toString();
 String bus_id = request.getParameter("id");
 String incdec = request.getParameter("quantity");
 
-
+System.out.println(incdec);
 int price = 0;
 int total = 0;
 int quantity = 0;
@@ -17,10 +17,7 @@ try {
 	
 	Connection con= ConnectionProvider.getCon();
 	Statement st= con.createStatement();
-	ResultSet rs = st.executeQuery("select sum(total) from cart where email = '"+email+"' and bus_id = '"+bus_id+"'");
-	System.out.println(email);
-	System.out.println(bus_id);
-	System.out.println(incdec);
+	ResultSet rs = st.executeQuery("select * from cart where email = '"+email+"' and bus_id = '"+bus_id+"'");
 	
 	while(rs.next()) {
 		
@@ -28,7 +25,11 @@ try {
 		total = rs.getInt(5);
 		quantity = rs.getInt(3);
 	}
-	
+	System.out.println(bus_id);
+	System.out.println(incdec);
+	System.out.println(quantity);
+	System.out.println(price);
+	System.out.println(total);
 	if(quantity==1 && incdec.equals("dec")) {
 		response.sendRedirect("myCart.jsp?msg=notPossible");
 	} else if(quantity != 1 && incdec.equals("dec")) {
