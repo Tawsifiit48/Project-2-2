@@ -7,7 +7,7 @@
 	if("admin@gmail.com".equals(email) && "admin".equals(password)) {
 		System.out.println("admin");
 		session.setAttribute("email", email);
-		response.sendRedirect("adminHome.jsp"); //admin page
+		response.sendRedirect("admin/adminHome.jsp"); //admin page
 	}
 	else {
 		System.out.println("2");
@@ -19,7 +19,7 @@
 			while(rs.next()) {
 				z = 1;
 				session.setAttribute("email", email);
-				response.sendRedirect("index.jsp"); //for user
+				response.sendRedirect("home.jsp"); //for user
 			}
 			if(z == 0) {
 				response.sendRedirect("login.jsp?msg=notexist");
