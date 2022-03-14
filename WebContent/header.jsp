@@ -14,7 +14,7 @@
             <h2><a href=""> <%out.println(email); %><i class='fas fa-user-alt'></i></a></h2>
             <a href="home.jsp">Home<i class="fa fa-institution"></i></a>
             <a href="myCart.jsp">My Cart<i class='fas fa-cart-arrow-down'></i></a>
-            <a href="">My Orders  <i class='fab fa-elementor'></i></a>
+            <a href="myOrders.jsp">My Orders  <i class='fab fa-elementor'></i></a>
             
             <a href="messageUs.jsp">Message Us <i class='fas fa-comment-alt'></i></a>
             <a href="about.jsp">About <i class="fa fa-address-book"></i></a>
