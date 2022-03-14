@@ -1,7 +1,6 @@
 <%@page import ="Project.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
 <%@include file="header.jsp" %>
-<%@include file="footer.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -16,9 +15,9 @@
             <th scope="col">Bus Name</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
-            <th scope="col"><i class="fa fa-inr"></i>  Price</th>
+            <th scope="col"><i class="fa fa-money"></i>  Price</th>
             <th scope="col">Quantity</th>
-            <th scope="col"><i class="fa fa-inr"></i> Sub Total</th>
+            <th scope="col"><i class="fa fa-money"></i> Sub Total</th>
             <th scope="col">Order Date</th>
               
           </tr>

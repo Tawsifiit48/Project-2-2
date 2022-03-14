@@ -1,7 +1,6 @@
 <%@page import ="Project.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
 <%@include file="header.jsp" %>
-<%@include file="footer.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -67,7 +66,7 @@ try {
 <thead>
 
           <tr>
-            <th scope="col" style="background-color: yellow;">Total: <%out.println(total); %> <i class="fa fa-inr"></i> </th>
+            <th scope="col" style="background-color: yellow;">Total: <%out.println(total); %> <i class="fa fa-money"></i> </th>
             
           </tr>
         </thead>
@@ -77,9 +76,9 @@ try {
             <th scope="col">Bus Name</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
-            <th scope="col"><i class="fa fa-inr"></i> price</th>
+            <th scope="col"><i class="fa fa-money"></i>price</th>
             <th scope="col">Quantity</th>
-            <th scope="col">Sub Total</th>
+            <th scope="col"><i class="fa fa-money"></i>Sub Total</th>
             <th scope="col">Remove <i class='fas fa-trash-alt'></i></th>
           </tr>
         </thead>
@@ -100,9 +99,9 @@ try {
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
              <td><%=rs.getString(4) %></td>
-            <td><i class="fa fa-inr"></i><%=rs.getString(5) %> </td>
+            <td><i class="fa fa-money"></i><%=rs.getString(5) %> </td>
             <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(10) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
-            <td><i class="fa fa-inr"></i><%=rs.getString(12) %> </td>
+            <td><i class="fa fa-money"></i><%=rs.getString(12) %> </td>
             <td><a href="removeFromCart.jsp? id = <%=rs.getString(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
           </tr>
           

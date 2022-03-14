@@ -1,13 +1,34 @@
 <%@page import = "Project.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
 <%@include file="adminHeader.jsp" %>
-<%@include file="..//footer.jsp" %>
 <html>
 <head>
 <link rel="stylesheet" href="../css/addNewProduct-style.css">
 <title>Add New Bus</title>
 </head>
 <body>
+<header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><span>T</span>ravel with <span>T</span>ransport</a>
+
+        <nav class="navbar">
+            <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="allProductEditProduct.jsp">View & Edit</a>
+            <a href="messagesReceived.jsp">Message</a>
+            <a href="ordersReceived.jsp">Bookings</a>
+        </nav>
+
+        <div class="dropdown">
+            <a href="../index.jsp">
+                <button class="dropbtn">Logout</button>
+            </a>
+        </div>
+
+    </header>
+
+<section class="home" id="home">
 <%
 String msg=request.getParameter("msg");
 if("done".equals(msg))
@@ -43,8 +64,8 @@ catch(Exception e){
 %>
 <form action="addNewProductAction.jsp" method="post">
 
-
-<h3 style="color: black;">Product ID:<%out.println(id); %> </h3>
+<%-- 
+<h3 style="color: black;">Product ID:<%out.println(id); %> </h3> --%>
 <input type="hidden" name="id" value="<%out.println(id); %>">
 
 <div class="left-div">
@@ -66,7 +87,7 @@ catch(Exception e){
 
    
 <div class="left-div">
-<h3>Enter arrival</h3>
+<h3 >Enter arrival</h3>
   <input class="input-style" type="text" name="arrival" placeholder="Enter Arrival place"required>
 <hr>
 </div>
@@ -99,10 +120,15 @@ catch(Exception e){
     <br> 
     <br>
     <br>
- <button class="button">Save <i class='far fa-arrow-alt-circle-right'></i></button>
+ <div class="wrapper">
+        <button class="button" >Save <i class='far fa-arrow-alt-circle-right'></i></button>
+    </div>
+ 
+ 
  
 </form>
 </body>
 <br><br><br>
+</section>
 </body>
 </html>

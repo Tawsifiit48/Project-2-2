@@ -1,10 +1,9 @@
 <%@page import ="Project.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
 <%@include file="adminHeader.jsp" %>
-<%@include file="..//footer.jsp" %>
 <html>
 <head>
-<link rel="stylesheet" href="../css/addNewProduct-style.css">
+<link rel="stylesheet" href="../css2/addNewProduct-style.css">
 <title>Add New Bus</title>
 <style>
 .back

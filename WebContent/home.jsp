@@ -1,7 +1,6 @@
 <%@page import ="Project.ConnectionProvider"%>
 <%@page import ="java.sql.*"%>
 <%@include file="header.jsp" %>
-<%@include file="footer.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -14,6 +13,20 @@ h3
 }
 </style> -->
 </head>
+ <div class="search-container">
+            <form action="searchHome.jsp" method="post">
+            
+             <input type="text" class="box" placeholder="From" name="search">
+            <input type="text" class="box" placeholder="To" name="search">
+            
+            <input type="date" class="box" placeholder="Journey Date" name="search">
+             
+          
+           
+             <button type="submit"> <i class="fa fa-search"></i></button> 
+</form>
+             
+            </div>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">Home <i class="fa fa-institution"></i></div>
 <%String msg=request.getParameter("msg");

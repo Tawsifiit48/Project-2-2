@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
+    
     <link rel="stylesheet" href="../css1/style.css">
     <link rel="stylesheet" href="../css/home-style.css">
 
 <!--  --><link rel="stylesheet" href="../css/home-style.css">
+				 <!-- <link rel="stylesheet" href="../css3/style.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
@@ -23,9 +25,9 @@
 
         <div id="menu-bar" class="fas fa-bars"></div>
 
-        <a href="#" class="logo"><span>T</span>ravel</a>
+        <!-- <a href="#" class="logo"><span>T</span>ravel</a> -->
 
-        <nav class="navbar">
+        <!-- <nav class="navbar">
             <a href="#home">home</a>
             <a href="#book">book</a>
             <a href="#packages">packages</a>
@@ -45,11 +47,11 @@
                 </div>
             </div>
         </div>
-
-        <form action="" class="search-bar-container">
+ -->
+        <!-- <form action="" class="search-bar-container">
             <input type="search" id="search-bar" placeholder="search here...">
             <label for="search-bar" class="fas fa-search"></label>
-        </form>
+        </form> -->
 
     </header>
 
@@ -64,7 +66,9 @@
      <br>
     <br>
     
-    <div class="topnav sticky">
+    
+    
+    <!-- <div class="topnav sticky">
  
    
     
@@ -75,13 +79,13 @@
             <a href="messagesReceived.jsp">Messages Received <i class='fas fa-comment-alt'></i></a>
             <a href="ordersReceived.jsp">Book List<i class="fas fa-archive"></i></a>
             <a href="../logout.jsp">Logout<i class='fas fa-share-square'></i></a>
-          </div>
+          </div> -->
            <br>
            <!--table-->
-           <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+           <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ -->
 <!-- custom js file link  -->
-<script src="../js/script.js"></script>
+<!-- <script src="../js/script.js"></script> -->
 
 
 
