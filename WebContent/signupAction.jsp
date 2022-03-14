@@ -2,16 +2,19 @@
 <%@page import = "java.sql.*"%>
 
 <%
-
+	String name = request.getParameter("name");
+	String phone = request.getParameter("phone");
 	String email = request.getParameter("email");
 	String password = request.getParameter("password");
-	String password2 = request.getParameter("password2");
+	
 	try{
 		Connection con = ConnectionProvider.getCon();
-		PreparedStatement ps = con.prepareStatement("insert into users values(?, ?, ?)");
-		ps.setString(1, email);
-		ps.setString(2, password);
-		ps.setString(3, password2);
+		PreparedStatement ps = con.prepareStatement("insert into users values(?, ?, ?, ?)");
+		ps.setString(1, name);
+		ps.setString(2, phone);
+		ps.setString(3, email);
+		ps.setString(4, password);
+		
 		ps.executeUpdate();
 		response.sendRedirect("login.jsp?msg=valid");
 		
