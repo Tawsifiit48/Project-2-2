@@ -6,7 +6,7 @@ try {
 	Connection con = ConnectionProvider.getCon();
 	Statement st = con.createStatement();
 	String q1 = "create table users(name varchar(30), phone varchar(20), email varchar(100)primary key, password varchar(100))";
-	String q2 = "create table buslist(id int, busname varchar(30),departure varchar(40), arrival varchar(40), dateOf varchar(20),price varchar(20), seats int )";
+	String q2 = "create table buslist(id int, busname varchar(30),departure varchar(40), arrival varchar(40), price varchar(20),dateOf varchar(20), seats int )";
 	String q3 = "create table cart(email varchar(100),bus_id int,quantity int, price int, total int, phone varchar(13))";
 	String q4 = "create table message(id int AUTO_INCREMENT, email varchar(100), subject varchar(200), body varchar(1000), PRIMARY KEY(id))";
 	System.out.println(q1);

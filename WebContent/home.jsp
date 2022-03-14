@@ -6,13 +6,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
-<style>
+<!-- <style>
 h3
 {
 	color: yellow;
 	text-align: center;
 }
-</style>
+</style> -->
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">Home <i class="fa fa-institution"></i></div>
@@ -38,46 +38,56 @@ if("invalid".equals(msg))
 <table>
         <thead>
           <tr>
-            <th scope="col">ID</th>
+             <th scope="col">ID</th>
             <th scope="col">Bus Name</th>
             <th scope="col">Departure</th>
              <th scope="col">Arrival</th>
-              <th scope="col"> DateOf</th>
-            <th scope="col"><i></i> Price (tk) </th>
+              <th scope="col"> Price(tk)</th>
+            <th scope="col"><i>DateOf </i>  </th>
              <th scope="col">seats</th>
+            <th scope="col">Add to cart <i class='fas fa-cart-plus'></i></th>
           </tr>
         </thead>
         <tbody>
 <%
 try{
-Connection con= ConnectionProvider.getCon();
-Statement st= con.createStatement();
-ResultSet rs = st.executeQuery("select * from buslist");
-while(rs.next()){
+	Connection con= ConnectionProvider.getCon();
+	Statement st= con.createStatement();
+	ResultSet rs = st.executeQuery("select * from buslist");
 
+	while(rs.next()){
+		/* System.out.println("Home");
+        System.out.println(rs.getString(1));
+        System.out.println(rs.getString(2));
+        System.out.println(rs.getString(3));
+        System.out.println(rs.getString(4));
+        System.out.println(rs.getString(5));
+        System.out.println(rs.getString(6));
+        System.out.println(rs.getString(7)); */
 
-%>
-          <tr>
-           
-            <td><%=rs.getString(2) %></td>
-            <td><%=rs.getString(3) %><td>
-            <td><%=rs.getString(4) %></td>
-             <td><%=rs.getString(5) %></td>
-              <td><%=rs.getString(6) %></td>
-               <td><%=rs.getString(7) %></td>
-            <td><a href="addToCartAction.jsp?id=<%=rs.getString(1)%>">Add to cart <i class='fas fa-cart-plus'></i></a></td>
-          </tr>
-          
-          <% 
-}
-}
-catch(Exception e){
-	System.out.println(e);
-}
-%>
-
-        </tbody>
-      </table>
+	%>
+	          <tr>
+	           <td><%=rs.getString(1) %></td>
+	            <td><%=rs.getString(2) %></td>
+	            <td><%=rs.getString(3) %></td>
+	            <td><%=rs.getString(4) %></td>
+	             <td><%=rs.getString(5) %></td>
+	              <td><%=rs.getString(6) %></td>
+	               <td><%=rs.getString(7) %></td>
+	               
+	            <td><a href="addToCartAction.jsp?id=<%=rs.getString(1) %>">Add to cart <i class='fas fa-cart-plus'></i></a></td>
+	          </tr>
+	<% 
+	}
+	}
+	catch(Exception e){
+		System.out.println("Exception found in home");
+		System.out.println(e);
+	}
+	%>
+	         
+	        </tbody>
+	      </table>
       <br>
       <br>
       <br>
