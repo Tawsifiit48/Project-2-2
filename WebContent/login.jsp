@@ -60,15 +60,22 @@
                   
                </form>
                <form action="signupAction.jsp" class="signup">
+               
+              	 <div class="field">
+                     <input type="text" name = "name" placeholder="Name" required>
+                  </div>
+                  
+                  <div class="field">
+                     <input type="text" name = "phone" placeholder="Phone no" required>
+                  </div>
+               
                   <div class="field">
                      <input type="text" name = "email" placeholder="Email Address" required>
                   </div>
                   <div class="field">
                      <input type="password" name = "password" placeholder="Password" required>
                   </div>
-                  <div class="field">
-                     <input type="password" name = "password2" placeholder="Confirm password" required>
-                  </div>
+                  
                   <div class="field btn">
                      <div class="btn-layer"></div>
                      <input type="submit" value="Signup">
