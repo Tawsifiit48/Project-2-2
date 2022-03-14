@@ -1,58 +1,38 @@
 <%@page errorPage="error.jsp" %>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>complete responsive tour and travel agency website design tutorial</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="css/home-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
-
-<body>
-
-    <!-- header section starts  -->
-
-    <header>
-
-        <div id="menu-bar" class="fas fa-bars"></div>
-
-        <a href="#" class="logo"><span>T</span>ravel</a>
-
-        <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#book">book</a>
-            <a href="#packages">packages</a>
-            <a href="#services">services</a>
-            <a href="#gallery">gallery</a>
-            <a href="#review">review</a>
-            <a href="#contact">contact</a>
-        </nav>
-
-        <div class="icons">
-            <i class="fas fa-search" id="search-btn"></i>
-            <div class="dropdown">
-                <button class="dropbtn">Account</button>
-                <div class="dropdown-content">
-                    <a href="login.html">User Login</a>
-                    <a href="adminlog.html">Admin Login</a>
-                </div>
+    <!--Header-->
+    <br>
+    <div class="topnav sticky">
+    <%String email = session.getAttribute("email").toString(); %>
+            <center><h2>Transport Enquiry System</h2></center>
+            <h2><a href=""> <%out.println(email); %><i class='fas fa-user-alt'></i></a></h2>
+            <a href="home.jsp">Home<i class="fa fa-institution"></i></a>
+            <a href="">My Cart<i class='fas fa-cart-arrow-down'></i></a>
+            <a href="">My Orders  <i class='fab fa-elementor'></i></a>
+            <a href="">Change Details <i class="fa fa-edit"></i></a>
+            <a href="messageUs.jsp">Message Us <i class='fas fa-comment-alt'></i></a>
+            <a href="">About <i class="fa fa-address-book"></i></a>
+            <a href="logout.jsp">Logout <i class='fas fa-share-square'></i></a>
+            <div class="search-container">
+            <form action="searchHome.jsp" method="post">
+            
+             <input type="text" class="box" placeholder="From" name="search">
+            <input type="text" class="box" placeholder="To" name="search">
+            
+            <input type="date" class="box" placeholder="Journey Date" name="search">
+             
+          
+           
+             <button type="submit"> <i class="fa fa-search"></i></button> 
+</form>
+             
             </div>
-        </div>
-
-        <form action="" class="search-bar-container">
-            <input type="search" id="search-bar" placeholder="search here...">
-            <label for="search-bar" class="fas fa-search"></label>
-        </form>
-
-    </header>
-    </body>
-    </html>
+          </div>
+           <br>
+           <!--table-->
