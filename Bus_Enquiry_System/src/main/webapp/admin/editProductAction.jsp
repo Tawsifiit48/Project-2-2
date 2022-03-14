@@ -14,10 +14,11 @@ try{
 	Statement st=con.createStatement();
 	st.executeUpdate("update buslist set busname='"+busname+"' ,departure='"+departure+"',arrival='"+arrival+"',dateOf='"+dateOf+"',price='"+price+"',seats='"+seats+"'where id='"+id+"'");
 	
-	
+	response.sendRedirect("allProductEditProduct.jsp?msg=done");
 	
 }
 catch(Exception e){
 	System.out.println(e);
+	response.sendRedirect("allProductEditProduct.jsp?msg=wrong");
 }
 %>

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@page import ="sign_model.ConnectionProvider"%>
+<%@page import ="java.sql.*"%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="../css1/style.css">
-    <link rel="stylesheet" href="../css1/review.css">
+    <link rel="stylesheet" href="css1/style.css">
+    <link rel="stylesheet" href="css1/review.css">
 
 </head>
 <body>
@@ -38,8 +39,8 @@
         <div class="dropdown">
             <button class="dropbtn">Account</button>
             <div class="dropdown-content">
-                <a href="login.html">User Login</a>
-                <a href="adminlog.html">Admin Login</a>
+                <a href="login.jsp">User Login</a>
+                <a href="login.jsp">Admin Login</a>
             </div>
         </div>
     </div>
@@ -56,15 +57,14 @@
 
     <div class="content">
         <h3>travelling is worthwhile</h3>
-        <p>dicover new places with us, adventure awaits</p>
+        <p>discover new places with us, adventure awaits</p>
     </div>
 
-    <div class="searchContainer">    
-        <form action="">
-            <input type="text" class="box" placeholder="From">
-            <input type="text" class="box" placeholder="To">
-            <input type="date" class="box" placeholder="Journey Date">
-            <a href="#" class="btn">search</a>
+    <div class="searchContainer"> 
+        
+        <form action="searchHome.jsp" method="post">
+
+            <a href="searchHome.jsp" class="btn">search</a>
         </form>
     
     </div>
@@ -515,7 +515,7 @@
 
  
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="../js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

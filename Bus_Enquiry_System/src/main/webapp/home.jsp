@@ -1,4 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import ="sign_model.ConnectionProvider"%>
+<%@page import ="java.sql.*"%>
+<%@include file="header.jsp" %>
+<%@include file="footer.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -13,32 +16,65 @@ h3
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">Home <i class="fa fa-institution"></i></div>
-
+<%String msg=request.getParameter("msg");
+if("added".equals(msg))
+{
+%>
 <h3 class="alert">Product added successfully!</h3>
-
+<%} %>
+<%
+if("exists".equals(msg))
+{
+%>
 <h3 class="alert">Product already exist in you cart! Quantity  increased!</h3>
+<%} %>
+<%
 
-<h3 class="alert">Password change successfully!</h3>
-
+if("invalid".equals(msg))
+{
+%>
+<h3 class="alert">ERROR!</h3>
+<%} %>
 <table>
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Category</th>
-            <th scope="col"><i class="fa fa-inr"></i> Price</th>
-            <th scope="col">Add to cart <i class='fas fa-cart-plus'></i></th>
+            <th scope="col">Bus Name</th>
+            <th scope="col">Departure</th>
+             <th scope="col">Arrival</th>
+              <th scope="col"> DateOf</th>
+            <th scope="col"><i></i> Price (tk) </th>
+             <th scope="col">seats</th>
           </tr>
         </thead>
         <tbody>
+<%
+try{
+Connection con= ConnectionProvider.getCon();
+Statement st= con.createStatement();
+ResultSet rs = st.executeQuery("select * from buslist");
+while(rs.next()){
 
+
+%>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><i class="fa fa-inr"></i> </i></td>
-            <td><a href="">Add to cart <i class='fas fa-cart-plus'></i></a></td>
+           
+            <td><%=rs.getString(2) %></td>
+            <td><%=rs.getString(3) %><td>
+            <td><%=rs.getString(4) %></td>
+             <td><%=rs.getString(5) %></td>
+              <td><%=rs.getString(6) %></td>
+               <td><%=rs.getString(7) %></td>
+            <td><a href="addToCartAction.jsp?id=<%=rs.getString(1)%>">Add to cart <i class='fas fa-cart-plus'></i></a></td>
           </tr>
+          
+          <% 
+}
+}
+catch(Exception e){
+	System.out.println(e);
+}
+%>
 
         </tbody>
       </table>

@@ -58,7 +58,7 @@
     
     <div class="topnav sticky">
  
-   
+   <% String email=session.getAttribute("email").toString(); %>
     
    
             <center><h2>Transport Enquiry System</h2></center>
@@ -68,7 +68,7 @@
             <a href="">Orders Received <i class="fas fa-archive"></i></a>
             <a href="">Cancel Orders <i class='fas fa-window-close'></i></a>
             <a href="">Delivered Orders <i class='fas fa-dolly'></i></a>
-            <a href="">Logout <i class='fas fa-share-square'></i></a>
+            <a href="../login.jsp">Logout <i class='fas fa-share-square'></i></a>
           </div>
            <br>
            <!--table-->
