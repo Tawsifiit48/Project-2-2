@@ -8,7 +8,7 @@
 <title>Add New Bus</title>
 <style>
 body{
-background-image: url("px.jpg");
+background-image: url("../images/px.jpg");
  background-repeat: no-repeat;
   background-position: center;
    background-size: cover;
