@@ -5,6 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About</title>
+<style>
+body{
+background-image: url("./images/ju.png");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+   padding-bottom:400px;
+}
+
+</style>
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">About <i class="fa fa-address-book"></i></div>
