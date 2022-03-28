@@ -12,10 +12,31 @@
             color: rgb(78, 78, 72);
             text-align: center;
         }
-        tr,td{
+        tr{
         font-size:20px;
         }
-    </style>
+        
+
+h3
+{
+	color: black;
+	text-align: center;
+}
+body{
+background-image: url("../images/px.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+   padding-bottom: 444px;
+}
+th{
+font-size:20px;
+}
+td{
+font-size:15px;
+}
+</style>
+  
 </head>
 <link rel="stylesheet" href="css3/table.css">
 <link rel="stylesheet" href="style.css">
@@ -43,10 +64,7 @@
         </div>
 
     </header>
-    <section class="home" id="home">
-            <h1 class="heading">
-                <span>List of All Buses</span>
-            </h1>
+    
         <%String msg = request.getParameter("msg");
 if("done".equals(msg))
 {%>
@@ -57,12 +75,15 @@ if("wrong".equals(msg))
 {%>
         <h3 class="alert">Some thing went wrong! Try again!</h3>
         <%} %>
-        <div class="table-wrapper">
-            <table class="fl-table">
+        <br>
+        <div style="color: white; text-align: center; font-size: 30px;">Vehicle List <i class='fas fa-comment-alt'></i></div>
+        <br>
+      
+            <table class="table table-success table-striped table-hover table-bordered">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Bus Name</th>
+                        <th scope="col">Vehicle Name</th>
                         <th scope="col">Departure</th>
                         <th scope="col">Arrival</th>
                         <th scope="col"> Price (tk)</th>
@@ -121,7 +142,7 @@ if("wrong".equals(msg))
 
                 </tbody>
             </table>
-        </div>
+     
         <br>
         <br>
         <br>
