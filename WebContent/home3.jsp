@@ -52,12 +52,13 @@ if("invalid".equals(msg))
         <thead>
           <tr>
              <th scope="col">ID</th>
-            <th scope="col">Bus Name</th>
+            <th scope="col">Launch Name</th>
             <th scope="col">Departure</th>
              <th scope="col">Arrival</th>
               <th scope="col"> Price(tk)</th>
             <th scope="col"><i>DateOf </i>  </th>
              <th scope="col">seats</th>
+             <th scope="col">Type</th>
             <th scope="col">Add to cart <i class='fas fa-cart-plus'></i></th>
           </tr>
         </thead>
@@ -81,6 +82,7 @@ try{
 	             <td><%=rs.getString(5) %></td>
 	              <td><%=rs.getString(6) %></td>
 	               <td><%=rs.getString(7) %></td>
+	               <td><%=rs.getString(8) %></td>
 	               
 	            <td><a href="addToCartAction.jsp?id=<%=rs.getString(1) %>">Add to cart <i class='fas fa-cart-plus'></i></a></td>
 	          </tr>
