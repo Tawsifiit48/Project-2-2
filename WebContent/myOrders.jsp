@@ -3,12 +3,35 @@
 <%@include file="header.jsp" %>
 <html>
 <head>
+<link rel="stylesheet" href="./css/bcss/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/9cf14037e4.js" crossorigin="anonymous"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+<title>Bookings</title>
+<style>
+h3
+{
+	color: black;
+	text-align: center;
+}
+
+body{
+background-image: url("./images/sea.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+}
+.thc{
+color: #F6D6A6;
+}
+
+</style>
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">My Orders <i class='fab fa-elementor'></i></div>
-<table>
+<table class="table table-success table-striped table-hover table-bordered">
         <thead>
           <tr>
             <th scope="col">S.No</th>
