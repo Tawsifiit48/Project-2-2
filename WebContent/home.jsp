@@ -69,9 +69,10 @@ try{
 	ResultSet rs = st.executeQuery("select * from buslist");
 
 	while(rs.next()){
-		
-
-	%>
+		int temp = rs.getInt(9);
+		if(temp == 1) {
+			%>
+			
 	          <tr>
 	           <td><%=rs.getString(1) %></td>
 	            <td><%=rs.getString(2) %></td>
@@ -83,7 +84,10 @@ try{
 	               
 	            <td><a href="addToCartAction.jsp?id=<%=rs.getString(1) %>">Add to cart <i class='fas fa-cart-plus'></i></a></td>
 	          </tr>
-	<% 
+	<% 		
+		}
+	
+	
 	}
 	}
 	catch(Exception e){

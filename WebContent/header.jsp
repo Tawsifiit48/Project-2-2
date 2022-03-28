@@ -12,7 +12,9 @@
     <%String email = session.getAttribute("email").toString(); %>
             <center><h2>Transport Enquiry System</h2></center>
             <h2><a href=""> <%out.println(email); %><i class='fas fa-user-alt'></i></a></h2>
-            <a href="home.jsp">Home<i class="fa fa-institution"></i></a>
+            <a href="home.jsp">Buslist<i class="fa fa-institution"></i></a>
+             <a href="home2.jsp">Trainlist<i class="fa fa-institution"></i></a>
+              <a href="home3.jsp">Launchlist<i class="fa fa-institution"></i></a>
             <a href="myCart.jsp">My Cart<i class='fas fa-cart-arrow-down'></i></a>
             <a href="myOrders.jsp">My Bookings  <i class='fab fa-elementor'></i></a>
             
