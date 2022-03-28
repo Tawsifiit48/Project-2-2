@@ -12,6 +12,9 @@
             color: rgb(78, 78, 72);
             text-align: center;
         }
+        tr,td{
+        font-size:20px;
+        }
     </style>
 </head>
 <link rel="stylesheet" href="css3/table.css">
@@ -26,6 +29,8 @@
 
         <nav class="navbar">
             <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="addNewProduct2.jsp">Add New Train</a>
+            <a href="addNewProduct3.jsp">Add New Launch</a>
             <a href="allProductEditProduct.jsp">View & Edit</a>
             <a href="messagesReceived.jsp">Message</a>
             <a href="ordersReceived.jsp">Bookings</a>
@@ -60,8 +65,8 @@ if("wrong".equals(msg))
                         <th scope="col">Bus Name</th>
                         <th scope="col">Departure</th>
                         <th scope="col">Arrival</th>
-                        <th scope="col"> DateOf</th>
-                        <th scope="col"><i></i> Price (tk) </th>
+                        <th scope="col"> Price (tk)</th>
+                        <th scope="col"><i></i> DateOf </th>
                         <th scope="col">seats</th>
                         <th scope="col">Edit <i class='fas fa-pen-fancy'></i></th>
                     </tr>
@@ -99,8 +104,10 @@ if("wrong".equals(msg))
                         <td>
                             <%=rs.getString(7) %>
                         </td>
-                        <td><a href="editProduct.jsp?id=<%=rs.getString(1) %>">Edit <i class='fas fa-pen-fancy'></i></a>
+                        <td>
+                        	<a href="editProduct.jsp?id=<%=rs.getString(1) %>">Edit <i class='fas fa-pen-fancy'></i></a>
                         </td>
+                         
                     </tr>
 
                     <% }

@@ -12,6 +12,7 @@
         <thead>
           <tr>
             <th scope="col">S.No</th>
+            <th scope="col">Transactoin ID</th>
             <th scope="col">Bus Name</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
@@ -34,6 +35,7 @@ try{
           <tr>
 			<%sno=sno+1;%>
            <td><%out.println(sno); %></td>
+           <td><%=rs.getString(13) %></td>
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
              <td><%=rs.getString(4) %></td>

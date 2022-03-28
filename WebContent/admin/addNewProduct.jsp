@@ -15,6 +15,8 @@
 
         <nav class="navbar">
             <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="addNewProduct2.jsp">Add New Train</a>
+            <a href="addNewProduct3.jsp">Add New Launch</a>
             <a href="allProductEditProduct.jsp">View & Edit</a>
             <a href="messagesReceived.jsp">Message</a>
             <a href="ordersReceived.jsp">Bookings</a>
@@ -36,7 +38,7 @@ if("done".equals(msg))
 	
 %>
 
-<h3 class="alert">Bus Added Successfully!</h3>
+<h3 class="alert">Added Successfully!</h3>
 <%}%>
 <%
 
@@ -62,7 +64,7 @@ catch(Exception e){
 	
 }
 %>
-<form action="addNewProductAction.jsp" method="post">
+<form action="addNewProductAction.jsp?temp=1" method="post">
 
 <%-- 
 <h3 style="color: black;">Product ID:<%out.println(id); %> </h3> --%>
@@ -112,6 +114,13 @@ catch(Exception e){
  
 <hr>
 </div>
+	
+<div class="left-div">
+<h3>Enter  class</h3>
+  <input class="input-style" type="text" name="type" placeholder="Enter class"required>
+<hr>
+</div>
+	
 <br>
     <br> 
     <br>

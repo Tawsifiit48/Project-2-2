@@ -12,6 +12,9 @@ h3
 	color: yellow;
 	text-align: center;
 }
+tr,td{
+        font-size:20px;
+        }
 </style>
 </head>
 
@@ -26,8 +29,10 @@ h3
 
         <a href="#" class="logo"><span>T</span>ravel with <span>T</span>ransport</a>
 
-        <nav class="navbar">
+       <nav class="navbar">
             <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="addNewProduct2.jsp">Add New Train</a>
+            <a href="addNewProduct3.jsp">Add New Launch</a>
             <a href="allProductEditProduct.jsp">View & Edit</a>
             <a href="messagesReceived.jsp">Message</a>
             <a href="ordersReceived.jsp">Bookings</a>

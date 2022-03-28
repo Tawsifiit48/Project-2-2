@@ -35,11 +35,13 @@
     <a href="#" class="logo"><span>T</span>ravel with <span>T</span>ransport</a>
 
     <nav class="navbar">
-      <a href="addNewProduct.jsp">Add New Bus</a>
-      <a href="allProductEditProduct.jsp">View & Edit</a>
-      <a href="messagesReceived.jsp">Message</a>
-      <a href="ordersReceived.jsp">Bookings</a>
-    </nav>
+            <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="addNewProduct2.jsp">Add New Train</a>
+            <a href="addNewProduct3.jsp">Add New Launch</a>
+            <a href="allProductEditProduct.jsp">View & Edit</a>
+            <a href="messagesReceived.jsp">Message</a>
+            <a href="ordersReceived.jsp">Bookings</a>
+     </nav>
 
     <div class="dropdown">
       <a href="../index.jsp">

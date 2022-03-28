@@ -24,7 +24,7 @@
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"><span>T</span>ravel with <span>T</span>ransport</a>
+    <a href="#" class="logo"><span>T</span>ravel <span>C</span>omfort <span>T</span>ransport</a>
 
     <nav class="navbar">
         <a href="#home">home</a>
@@ -56,8 +56,8 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3>travelling is worthwhile</h3>
-        <p>dicover new places with us, adventure awaits</p>
+        <h3>travelling is worth while</h3>
+        <p>discover new places with us, adventure awaits</p>
     </div>
 
     

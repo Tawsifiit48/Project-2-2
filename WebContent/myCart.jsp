@@ -23,12 +23,22 @@ if("notPossible".equals(msg))
 %>
 <h3 class="alert">There is only one Quantity! So click on remove!</h3>
 <%} %>
+
+<%
+if("full".equals(msg))
+{
+%>
+<h3 class="alert">No seat available</h3>
+<%} %>
+
 <%
 if("inc".equals(msg))
 {
 %>
 <h3 class="alert">Quantity  Increased Successfully!</h3>
 <%} %>
+
+
 <%
 
 if("dec".equals(msg))
@@ -36,6 +46,7 @@ if("dec".equals(msg))
 %>
 <h3 class="alert">Quantity  Decreased Successfully!</h3>
 <%} %>
+
 
 
 <%
@@ -73,6 +84,7 @@ try {
         <thead>
           <tr>
           <th scope="col">S.No</th>
+          <th scope="col">Transactoin ID</th>
             <th scope="col">Bus Name</th>
             <th scope="col">From</th>
             <th scope="col">To</th>
@@ -96,13 +108,14 @@ try {
           <tr>
 			<%sno=sno+1;%>
            <td><%out.println(sno); %></td>
+           <td><%=rs.getString(13) %></td>
             <td><%=rs.getString(2) %></td>
             <td><%=rs.getString(3) %></td>
              <td><%=rs.getString(4) %></td>
             <td><i class="fa fa-money"></i><%=rs.getString(5) %> </td>
             <td><a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=inc"><i class='fas fa-plus-circle'></i></a> <%=rs.getString(10) %> <a href="incDecQuantityAction.jsp?id=<%=rs.getString(1)%> &quantity=dec"><i class='fas fa-minus-circle'></i></a></td>
             <td><i class="fa fa-money"></i><%=rs.getString(12) %> </td>
-            <td><a href="removeFromCart.jsp? id = <%=rs.getString(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
+            <td><a href="removeFromCart.jsp?id=<%=rs.getString(1)%>">Remove <i class='fas fa-trash-alt'></i></a></td>
           </tr>
           
           <%

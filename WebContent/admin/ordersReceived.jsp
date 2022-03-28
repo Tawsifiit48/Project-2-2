@@ -9,6 +9,9 @@
 <style>
 .th-style
 { width: 25%;}
+tr,td{
+        font-size:13px;
+        }
 </style>
 </head>
 <link rel="stylesheet" href="css/table.css">
@@ -24,6 +27,8 @@
 
         <nav class="navbar">
             <a href="addNewProduct.jsp">Add New Bus</a>
+            <a href="addNewProduct2.jsp">Add New Train</a>
+            <a href="addNewProduct3.jsp">Add New Launch</a>
             <a href="allProductEditProduct.jsp">View & Edit</a>
             <a href="messagesReceived.jsp">Message</a>
             <a href="ordersReceived.jsp">Bookings</a>
@@ -76,12 +81,13 @@
             <th scope="col">Departure</th>
             <th scope="col">Arrival</th>
             <th scope="col">Date</th>
+            <th scope="col"> Email </th>
             <th scope="col">Price</th>
             
-            <th scope="col"> Email </th>
-            <th scope="col">Bus_id</th>
+            
+            <!-- <th scope="col">Bus_id</th> -->
             <th scope="col">Quantity</th>
-            <th scope="col">Price</th>
+            <!-- <th scope="col">Price</th> -->
              <th scope="col">total</th>
              <th scope="col">Phone</th>
               
@@ -103,14 +109,15 @@ try{
             <td><%=rs.getString(3) %></td>
              <td><%=rs.getString(4) %></td>
             <td><%=rs.getString(6) %> </td>
+            <td><%=rs.getString(8) %></td>
             <td><%=rs.getString(5) %></td>
-             <td><%=rs.getString(8) %></td>
-            <td><%=rs.getString(9) %> </td>
+             
+            <%-- <td><%=rs.getString(9) %> </td> --%>
             <td><%=rs.getString(10) %></td>
-            <td><%=rs.getString(11) %> </td>
+            <%-- <td><%=rs.getString(11) %> </td> --%>
             <td><%=rs.getString(12) %></td>
              
-            <td><%=rs.getString(14) %> </td>
+            <td><%=rs.getString(15) %> </td>
             
           </tr>
           
