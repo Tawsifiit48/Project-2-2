@@ -5,30 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
-<!-- <style>
+<style>
 h3
 {
-	color: yellow;
+	color: black;
 	text-align: center;
 }
-</style> -->
+body{
+background-image: url("./images/bus3.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+   padding-bottom:200px;
+  
+}
+</style>
 </head>
- <div class="search-container">
-            <form action="searchHome.jsp" method="post">
-            
-             <input type="text" class="box" placeholder="From" name="search">
-            <input type="text" class="box" placeholder="To" name="search">
-            
-            <input type="date" class="box" placeholder="Journey Date" name="search">
-             
-          
-           
-             <button type="submit"> <i class="fa fa-search"></i></button> 
-</form>
-             
-            </div>
+
 <body>
-<div style="color: white; text-align: center; font-size: 30px;">Home <i class="fa fa-institution"></i></div>
+<div style="color: black; background-color:white; opacity: 0.5; text-align: center; font-size: 30px;">Home <i class="fa fa-institution"></i></div>
+<br>
+<br>
 <%String msg=request.getParameter("msg");
 if("added".equals(msg))
 {
@@ -48,7 +45,24 @@ if("invalid".equals(msg))
 %>
 <h3 class="alert">ERROR!</h3>
 <%} %>
-<table>
+
+            <div class="search-container" style="padding-left:400px ;" >
+            <form action="searchHome.jsp" method="post">
+            
+             &nbsp<input type="text" class="box pall" placeholder="From" name="search">
+            <input type="text" class="box pall" placeholder="To" name="search">
+            
+            <input type="date" class="box pall" placeholder="Journey Date" name="search">
+             
+          
+           
+             <button type="submit"> <i class="fa fa-search pall"></i></button> 
+</form>
+             
+            </div>
+            <br>
+<br>
+<table class="table table-success table-striped table-hover table-bordered">
         <thead>
           <tr>
              <th scope="col">ID</th>
