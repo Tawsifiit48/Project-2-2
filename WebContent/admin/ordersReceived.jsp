@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" href="../css/bcss/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bcss/bootstrap.min.css">
 <link rel="stylesheet" href="../css/ordersReceived-style.css">
 <title>Home</title>
 <style>
@@ -91,7 +91,7 @@ font-size:15px;
 <table class="table table-success table-striped table-hover table-bordered">
           <tr>
     		<th scope="col">ID</th>
-            <th scope="col">Bus Name</th>
+            <th scope="col">Vehicle Name</th>
             <th scope="col">Departure</th>
             <th scope="col">Arrival</th>
             <th scope="col">Date</th>
