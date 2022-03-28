@@ -4,14 +4,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" href="../css/bcss/bootstrap.min.css">
 <link rel="stylesheet" href="../css/ordersReceived-style.css">
 <title>Home</title>
 <style>
 .th-style
 { width: 25%;}
-tr,td{
+tr{
         font-size:13px;
         }
+        body{
+background-image: url("../images/px.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+   padding-bottom: 444px;
+}
+th{
+font-size:20px;
+}
+td{
+font-size:15px;
+}
 </style>
 </head>
 <link rel="stylesheet" href="css/table.css">
@@ -42,8 +56,8 @@ tr,td{
 
     </header>
 
-<section class="home" id="home">
-<div style="color: white; text-align: center; font-size: 30px;">Book List <i class="fas fa-archive"></i></div>
+
+<div style="color:brown; text-align: center; font-size: 30px;">Book List <i class="fas fa-archive"></i></div>
 
 <%
 
@@ -74,7 +88,7 @@ tr,td{
 
 
 
-<table id="customers">
+<table class="table table-success table-striped table-hover table-bordered">
           <tr>
     		<th scope="col">ID</th>
             <th scope="col">Bus Name</th>
@@ -134,6 +148,6 @@ try{
       <br>
       <br>
       <br>
-</section>
+
 </body>
 </html>

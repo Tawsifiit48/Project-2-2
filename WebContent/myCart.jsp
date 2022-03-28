@@ -5,17 +5,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link rel="stylesheet" href="./css/bcss/bootstrap.min.css">
 <title>My Cart</title>
 <style>
 h3
 {
-	color: yellow;
+	color: black;
 	text-align: center;
+}
+body{
+background-image: url("./images/sea.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+}
+.thc{
+color: #F6D6A6;
 }
 </style>
 </head>
 <body>
-<div style="color: white; text-align: center; font-size: 30px;">My Cart <i class='fas fa-cart-arrow-down'></i></div>
+<div style="color: black; background-color:white; opacity: 0.5; text-align: center; font-size: 30px;">My Cart <i class='fas fa-cart-arrow-down'></i></div>
 
 <%String msg=request.getParameter("msg");
 if("notPossible".equals(msg))
@@ -73,11 +85,11 @@ try {
 
 
 
-<table>
+ <table class="table table-success table-striped table-hover table-bordered">
 <thead>
 
           <tr>
-            <th scope="col" style="background-color: yellow;">Total: <%out.println(total); %> <i class="fa fa-money"></i> </th>
+            <th scope="col" style="background-color: #DEF1F1;"">Total: <%out.println(total); %> <i class="fa fa-money"></i> </th>
             
           </tr>
         </thead>

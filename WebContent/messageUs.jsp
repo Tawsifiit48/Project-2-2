@@ -6,6 +6,23 @@
 <link rel="stylesheet" href="css/messageUs.css">
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <title>Message Us</title>
+<style>
+
+body{
+background-image: url("./images/letter.jpg");
+ background-repeat: no-repeat;
+  background-position: center;
+   background-size: cover;
+}
+.opacity-box{
+opacity: 0.8;
+}
+.p{
+padding-left:300px;
+
+
+}
+</style>
 </head>
 <body>
 <div style="color: white; text-align: center; font-size: 30px;">Message Us <i class='fas fa-comment-alt'></i></div>
@@ -14,7 +31,7 @@
 	String msg = request.getParameter("msg");
 	if("valid".equals(msg)) {
 		%>
-		<h3 style="text-align:center; color:yellow;">Message successfully sent. Our team will contact you soon!</h3>
+		<h3 style="text-align:center; color:black;">Message successfully sent. Our team will contact you soon!</h3>
 	<% }%>
 	
 	<%
